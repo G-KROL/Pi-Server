@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>SMART|%date{yyyy-MM-dd HH:mm:ss.SSS}|%.-1level|%logger|%msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <logger name="org.hibernate" level="info"/>
+    <logger name="org.hibernate.engine.StatefulPersistenceContext.ProxyWarnLog" level="error"/>
+    <logger name="org.springframework" level="info"/>
+    <logger name="org.springframework.security" level="info"/>
+
+    <logger name="org.hibernate.SQL" level="off"/>
+
+    <logger name="ch.qos.logback" level="error" />
+
+    <logger name="pl.edu.agh.eaiib" level="debug"/>
+
+    <logger name="jdbc.sqlonly" level="error"/>
+
+    <logger name="jdbc.sqltiming" level="info"/>
+
+    <logger name="jdbc.audit" level="error"/>
+
+    <logger name="jdbc.resultset" level="error"/>
+
+    <logger name="jdbc.connection" level="error"/>
+
+    <root level="info">
+        <appender-ref ref="console"/>
+    </root>
+
+</configuration>
